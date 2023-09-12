@@ -64,7 +64,6 @@ fastjsonschema==2.16.2
 ffmpy==0.3.1
 filelock==3.12.3
 filterpy==1.4.5
-flix-densepose @ file:///home/ubuntu/projects/python/vatsal/p2p_modules/packages/flix_densepose-0.1.0.tar.gz#sha256=2f0183830ae3b265b06d40e89cd6fd63f9417fba9c2b92d7455057c938c9e3f1
 fonttools==4.42.1
 fqdn==1.5.1
 frozenlist==1.4.0
