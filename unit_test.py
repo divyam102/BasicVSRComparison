@@ -31,4 +31,7 @@ if __name__ == '__main__':
         out_4k.write(output_frame_4k[i])
     out_3k.release()
     out_4k.release()
+
+    print(f"PSNR and ssim value of 3K chckpoint are {psnr_3k} and {ssim_3k}")
+    print(f"PSNR and ssim value of 4K chckpoint are {psnr_4k} and {ssim_4k}")
     # print(np.mean(psnr), np.mean(ssim), fps)

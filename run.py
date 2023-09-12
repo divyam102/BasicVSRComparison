@@ -71,5 +71,5 @@ class Bolt:
                 if idx == 0 and num == 0:
                     h_stack = np.hstack((output, input_frame_1024))
                 cv2.imwrite(os.path.join(self.save_path, f'{num}_{idx}_BasicVSR.png'), output)
-        return psnr,ssim, h_stack, output_frame, self.fps
+        return np.mean(psnr),np.mean(ssim), h_stack, output_frame, self.fps
 
