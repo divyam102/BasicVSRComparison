@@ -64,4 +64,4 @@ if __name__ == '__main__':
     # Print PSNR and SSIM values for both checkpoints
     print(f"PSNR and SSIM value of 3K checkpoint are {psnr_3k} and {ssim_3k}")
     print(f"PSNR and SSIM value of 4K checkpoint are {psnr_4k} and {ssim_4k}")
-    print(f"PSNR and SSIM value of 4K checkpoint are {psnr_RedS4} and {ssim_RedS4}")
+    print(f"PSNR and SSIM value of base pretrained checkpoint on RED4s dataset are {psnr_RedS4} and {ssim_RedS4}")
