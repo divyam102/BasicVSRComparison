@@ -5,24 +5,24 @@ import numpy as np  # Import NumPy for numerical operations
 if __name__ == '__main__':
     # Define options for the first Bolt object
     opts_1 = {
-        "model_path":"/content/drive/MyDrive/net_g_300000.pth",
-        "input_path":"/content/BasicVSRComparison/video1_256p.mp4",
-        "save_path":"/content/BasicVSRComparison/video_frame_path_3",
+        "model_path":"/home/ubuntu/projects/python/divyam/BasicVSR/chkpts/net_g_300000.pth",
+        "input_path":"/home/ubuntu/projects/python/divyam/BasicVSR/video1_256p.mp4",
+        "save_path":"/home/ubuntu/projects/python/divyam/BasicVSR/video_frame_path_3",
         "interval":4,
     }
 
     # Define options for the second Bolt object
     opts_2 = {
-        "model_path":"/content/drive/MyDrive/net_g_400000.pth",
-        "input_path":"/content/BasicVSRComparison/video1_256p.mp4",
-        "save_path":"/content/BasicVSRComparison/video_frame_path_4",
+        "model_path":"/home/ubuntu/projects/python/divyam/BasicVSR/chkpts/net_g_400000.pth",
+        "input_path":"/home/ubuntu/projects/python/divyam/BasicVSR/video1_256p.mp4",
+        "save_path":"/home/ubuntu/projects/python/divyam/BasicVSR/video_frame_path_4",
         "interval":4,
     }
     # Define options for the third Bolt object
     opts_3 = {
-        "model_path":"/content/drive/MyDrive/BasicVSR_REDS4-543c8261.pth",
-        "input_path":"/content/BasicVSRComparison/video1_256p.mp4",
-        "save_path":"/content/BasicVSRComparison/video_frame_path_RedS4",
+        "model_path":"/home/ubuntu/projects/python/divyam/BasicVSR/chkpts/BasicVSR_REDS4-543c8261.pth",
+        "input_path":"/home/ubuntu/projects/python/divyam/BasicVSR/video1_256p.mp4",
+        "save_path":"/home/ubuntu/projects/python/divyam/BasicVSR/video_frame_path_RedS4",
         "interval":4,
     }
 
@@ -36,14 +36,14 @@ if __name__ == '__main__':
     psnr_RedS4, ssim_RedS4, h_stack_RedS4, output_frame_RedS4, fps_RedS4 = obj_RedS4.inference()
 
     # Save horizontally stacked images to see the difference between the original frame and SR frame
-    cv2.imwrite(f"/content/BasicVSRComparison/stack_3k/img_stack.jpg", h_stack_3k)
-    cv2.imwrite(f"/content/BasicVSRComparison/stack_4k/img_stack.jpg", h_stack_4k)
-    cv2.imwrite(f"/content/BasicVSRComparison/stack_RedS4/img_stack.jpg", h_stack_RedS4)
+    cv2.imwrite(f"/home/ubuntu/projects/python/divyam/BasicVSR/stack_3k/img_stack.jpg", h_stack_3k)
+    cv2.imwrite(f"/home/ubuntu/projects/python/divyam/BasicVSR/stack_4k/img_stack.jpg", h_stack_4k)
+    cv2.imwrite(f"/home/ubuntu/projects/python/divyam/BasicVSR/stack_RedS4/img_stack.jpg", h_stack_RedS4)
 
     # Define output video paths
-    pathOut_3k = "/content/BasicVSRComparison/video_3k/output.avi"
-    pathOut_4k = "/content/BasicVSRComparison/video_4k/output.avi"
-    pathOut_RedS4 = "/content/BasicVSRComparison/video_RedS4/output.avi"
+    pathOut_3k = "/home/ubuntu/projects/python/divyam/BasicVSR/video_3k/output.avi"
+    pathOut_4k = "/home/ubuntu/projects/python/divyam/BasicVSR/video_4k/output.avi"
+    pathOut_RedS4 = "/home/ubuntu/projects/python/divyam/BasicVSR/video_RedS4/output.avi"
 
     # Create video writers for the output videos
     out_3k = cv2.VideoWriter(pathOut_3k, cv2.VideoWriter_fourcc(*'DIVX'), fps_3k, (1024, 1024))
